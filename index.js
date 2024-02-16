@@ -22,20 +22,13 @@ module.exports = {
     "no-useless-concat": "error",
     "no-useless-rename": "error",
     "no-useless-return": "error",
+    "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     "no-var": "error",
     "prefer-arrow-callback": "warn",
     "prefer-const": "warn",
     "prefer-object-spread": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
-    "sort-imports": [
-      "error",
-      {
-        ignoreCase: true,
-        memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
-        allowSeparatedGroups: true,
-      },
-    ],
     "sort-keys": [
       "error",
       "asc",
@@ -58,6 +51,16 @@ module.exports = {
         css: "always",
         png: "always",
         jpg: "always",
+      },
+    ],
+    "import/order": [
+      "error",
+      {
+        alphabetize: {
+          caseInsensitive: true,
+          order: "asc",
+          orderImportKind: "asc",
+        },
       },
     ],
   },
